@@ -1,2 +1,2 @@
-# Lill-Wedwith
+# NGC
 Our repository. 
