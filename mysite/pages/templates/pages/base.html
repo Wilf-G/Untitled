@@ -1,15 +1,13 @@
 {% load static %}
 
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css">
 <title>{% block title %}My Website{% endblock %}</title>
 
-<nav class="navbar navbar-expand-lg navbar-dark navcolour">
+<nav class="navbar navbar-expand-lg navcolour">
     <a class="navbar-brand ms-4" href="{% url 'home' %}">
-        <img
-            src="{% static 'images/Designer.png' %}"
-            alt="Home"
-
-        >
+        <img class="logo"
+            src="../static/Designer.png" alt="Home" >
     </a>
     <div class = "navbar-nav">
     <a class="nav-link ms-4" href="{% url 'home'%}">Home</a>
@@ -24,17 +22,7 @@
     {% endblock %}
 </div>
 
-<style>
-
-    .maincolorway {
-        background-color: #01c0f3;
-        border-radius: 1rem 1rem 1rem 1rem;
-        box-shadow: 0.1rem 0.1rem 0.1rem;
-    }
-    .navcolour {
-        background-color: #021133;
-    }
 
 
-   
-</style>
+
+<footer> NCG CONVENTIONS LTD - EST 2026   All rights reserved   </footer>
