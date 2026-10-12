@@ -1,0 +1,41 @@
+<style> 
+
+    .event_box {
+        border: 1rem;
+        background-color: aquamarine;
+        padding: 1rem;
+        margin: 2rem;
+        border-radius: 0.1rem 0.1rem 0.1rem 0.1rem;
+        opacity: 0.7;
+        align-items: center;
+    }
+    
+    </style>
+
+{% extends 'pages/base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="card p-4">
+    <h1>Events</h1>
+    <p>Events page yay</p>
+    <p>events go here</p>
+</div>
+
+{% for event in events %}
+<div class="event_box">
+<h3>{{event.title}}</h3>
+<p>{{event.description}}</p>
+<p><strong>Date:</strong> {{event.event_date}}</p>
+<p><strong>Category:</strong> {{event.category}}</p>
+<p><strong>Organiser:</strong> {{event.organiser}}</p>
+</div>
+
+
+
+{% empty %}
+<p>No events have been added yet</p>
+{% endfor %}
+{% endblock %}
+

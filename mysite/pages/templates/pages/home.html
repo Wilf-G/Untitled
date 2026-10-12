@@ -1,0 +1,77 @@
+{% extends 'pages/base.html' %}
+
+{% block title %}Itinerary{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/scripting.js' %}" defer></script>
+
+<main id="homepage">
+
+    <div class="card p-4">
+
+        <h1>{{ title }}</h1>
+
+        <p>{{ message }}</p>
+
+        {% if logged_in %}
+            <div class="alert alert-success">
+                Welcome Back
+            </div>
+   
+
+        <h2>Your itinerary</h2>
+
+        <ul class="list-group">
+            {% for item in itinerary %}
+                <li class="list-group-item">
+                    {{ item }}
+                </li>
+            {% endfor %}
+        </ul>
+
+        <h2>Add Events</h2>
+
+        <!-- Events will be added here by JavaScript -->
+        <div class="todo-container"></div>
+
+        <form class="todo_form">
+
+            <label for="title">Title</label><br>
+            <input
+                id="title"
+                class="title"
+                type="text"
+                required
+            >
+
+            <br><br>
+
+            <label for="description">Description</label><br>
+            <textarea
+                id="description"
+                class="desc-input"
+            ></textarea>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </div>
+
+</main>
+
+{% else %}
+<div class="alert alert-warning">
+    Please log in to view your itinerary
+</div>
+{% endif %}
+
+
+
+{% endblock %}

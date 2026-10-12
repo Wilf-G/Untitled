@@ -1,0 +1,21 @@
+{% extends 'pages/base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="card p-4 text-success-emphasis bg-success-subtle border border-primary-subtle rounded-3">
+    <h1>{{ title }}</h1>
+    <p>{{ message1 }}</p>
+    <p>{{ message2 }}</p>
+
+<h2>Quick Facts</h2>
+<ul class="list-group">
+    {% for fact in facts %}
+    <li class="list-group-item">{{ fact }}</li>
+    {% endfor %}
+    </ul>
+
+</div>
+
+
+{% endblock %}
