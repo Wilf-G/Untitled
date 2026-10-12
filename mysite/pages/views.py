@@ -6,7 +6,6 @@ def home(request):
         'title': 'Hub',
         'message': 'Welcome to your NGC Hub',
         'logged_in': True,
-        'itinerary': ['Tech talk with Todd Howard','Paint Pictures of Todd Howard','Todd Howard themed roleplay']
     }
     return render(request, 'pages/home.html', data)
 

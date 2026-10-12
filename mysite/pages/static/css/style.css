@@ -40,8 +40,16 @@ h3, p {
 }
 
 .card {
-    padding: 60rem;
+    padding: 2rem;
     margin: 2rem;
+}
+
+.list-group-item {
+    border: 2px #021035;
+}
+
+.list-group {
+    border: 2px #021035;
 }
 
 .todo_item {
